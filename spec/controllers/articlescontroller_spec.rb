@@ -20,7 +20,6 @@ RSpec.describe ArticlesController, :type => :controller do
     it "loads all of the articles into @articles" do
       article1, article2 = Article.create!(title: "Solid Man"), Article.create!(title: "Solid Woman")
       get :index
-
       expect(assigns(:articles)).to match_array([article1, article2])
     end
   end

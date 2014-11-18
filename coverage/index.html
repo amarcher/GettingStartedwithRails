@@ -14,26 +14,26 @@
       <img src="./assets/0.8.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2014-11-18T11:57:29-08:00">2014-11-18T11:57:29-08:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2014-11-18T12:30:31-08:00">2014-11-18T12:30:31-08:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="green">99.17%</span></span>
+    (<span class="covered_percent"><span class="green">99.4%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.52
+         1.48
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
-    <b>24</b> files in total.
-    <b>120</b> relevant lines. 
-    <span class="green"><b>119</b> lines covered</span> and
+    <b>26</b> files in total.
+    <b>167</b> relevant lines. 
+    <span class="green"><b>166</b> lines covered</span> and
     <span class="red"><b>1</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -68,6 +68,16 @@
         <td>28</td>
         <td>1</td>
         <td>1.7</td>
+      </tr>
+      
+      <tr>
+        <td class="strong"><a href="#7f3275e7851aba98b20fcbe666ccc0d02a06e14e" class="src_link" title="app/controllers/comments_controller.rb">app/controllers/comments_controller.rb</a></td>
+        <td class="green strong">100.0 %</td>
+        <td>22</td>
+        <td>14</td>
+        <td>14</td>
+        <td>0</td>
+        <td>1.6</td>
       </tr>
       
       <tr>
@@ -261,6 +271,16 @@
       </tr>
       
       <tr>
+        <td class="strong"><a href="#2f69d85893b44159533a72b9c2b699f7c3eba200" class="src_link" title="spec/controllers/commentscontroller_spec.rb">spec/controllers/commentscontroller_spec.rb</a></td>
+        <td class="green strong">100.0 %</td>
+        <td>49</td>
+        <td>33</td>
+        <td>33</td>
+        <td>0</td>
+        <td>1.1</td>
+      </tr>
+      
+      <tr>
         <td class="strong"><a href="#c7b2464e8c9d47162eab1990605d8ff6c7b96de9" class="src_link" title="spec/models/article_spec.rb">spec/models/article_spec.rb</a></td>
         <td class="green strong">100.0 %</td>
         <td>41</td>
@@ -287,7 +307,7 @@
         <td>5</td>
         <td>5</td>
         <td>0</td>
-        <td>7.6</td>
+        <td>8.8</td>
       </tr>
       
     </tbody>
@@ -717,6 +737,156 @@
         </li>
       
         <li class="never" data-hits="" data-linenumber="59">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+    </ol>
+  </pre>
+</div>
+      
+        <div class="source_table" id="7f3275e7851aba98b20fcbe666ccc0d02a06e14e">
+  <div class="header">
+    <h3>app/controllers/comments_controller.rb</h3>
+    <h4><span class="green">100.0 %</span> covered</h4>
+    <div>
+      <b>14</b> relevant lines. 
+      <span class="green"><b>14</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
+    </div>
+  </div>
+  
+  <pre>
+    <ol>
+      
+        <li class="covered" data-hits="1" data-linenumber="1">
+          <span class="hits">1</span>
+          
+          <code class="ruby">class CommentsController &lt; ApplicationController</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="2">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="3">
+          <span class="hits">1</span>
+          
+          <code class="ruby"> http_basic_authenticate_with name: &quot;dhh&quot;, password: &quot;secret&quot;, only: :destroy</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="4">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="5">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def create</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="6">
+          <span class="hits">2</span>
+          
+          <code class="ruby">    @article = Article.find(params[:article_id])</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="7">
+          <span class="hits">2</span>
+          
+          <code class="ruby">    @comment = @article.comments.create(comment_params)</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="8">
+          <span class="hits">2</span>
+          
+          <code class="ruby">    redirect_to article_path(@article)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="9">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="10">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="11">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def destroy</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="12">
+          <span class="hits">2</span>
+          
+          <code class="ruby">    @article = Article.find(params[:article_id])</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="13">
+          <span class="hits">2</span>
+          
+          <code class="ruby">    @comment = @article.comments.find(params[:id])</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="14">
+          <span class="hits">2</span>
+          
+          <code class="ruby">    @comment.destroy</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="15">
+          <span class="hits">2</span>
+          
+          <code class="ruby">    redirect_to article_path(@article)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="16">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="17">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="18">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  private</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="19">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    def comment_params</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="20">
+          <span class="hits">2</span>
+          
+          <code class="ruby">      params.require(:comment).permit(:commenter, :body)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="21">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="22">
           
           
           <code class="ruby">end</code>
@@ -2316,6 +2486,318 @@
   </pre>
 </div>
       
+        <div class="source_table" id="2f69d85893b44159533a72b9c2b699f7c3eba200">
+  <div class="header">
+    <h3>spec/controllers/commentscontroller_spec.rb</h3>
+    <h4><span class="green">100.0 %</span> covered</h4>
+    <div>
+      <b>33</b> relevant lines. 
+      <span class="green"><b>33</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
+    </div>
+  </div>
+  
+  <pre>
+    <ol>
+      
+        <li class="covered" data-hits="1" data-linenumber="1">
+          <span class="hits">1</span>
+          
+          <code class="ruby">require &quot;rails_helper&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="2">
+          <span class="hits">1</span>
+          
+          <code class="ruby">require_relative &quot;../support/auth_helper&quot;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="3">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="4">
+          <span class="hits">1</span>
+          
+          <code class="ruby">RSpec.describe CommentsController, :type =&gt; :controller do</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="5">
+          
+          
+          <code class="ruby">  # login to http basic auth</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="6">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  include AuthHelper</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="7">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="8">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  describe &quot;POST #create&quot; do</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="9">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="10">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    it &quot;responds with an HTTP 302 status code&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="11">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      article = Article.create!(title: &quot;my article&quot;)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="12">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      post :create, {article_id: article.reload.id, comment: {commenter: &quot;Me&quot;, text: &quot;hi&quot;} }</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="13">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(response).to have_http_status(302)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="14">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="15">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="16">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    it &quot;creates a comment on the article&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="17">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      article = Article.create!(title: &quot;my article&quot;)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="18">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect {</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="19">
+          <span class="hits">1</span>
+          
+          <code class="ruby">        post :create, {article_id: article.reload.id, comment: {commenter: &quot;Me&quot;, text: &quot;hi&quot;} }</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="20">
+          <span class="hits">2</span>
+          
+          <code class="ruby">      }.to change {article.reload.comments.count }.by 1</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="21">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="22">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="23">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="24">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  describe &quot;DELETE #destroy&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="25">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    it &quot;responds unsuccessfully with an HTTP 401 status code if user is unauthenticated&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="26">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      article = Article.create!(title: &quot;my article&quot;)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="27">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      comment = Comment.create!(commenter: &quot;Joe&quot;, body: &quot;what&quot;, article_id: article.reload.id)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="28">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      delete :destroy, {article_id: article.reload.id, id: comment.reload.id }</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="29">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(response).to have_http_status(401)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="30">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="31">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="32">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    it &quot;responds with an HTTP 302 status code if user is authenticated&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="33">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      http_login</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="34">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      article = Article.create!(title: &quot;my article&quot;)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="35">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      comment = Comment.create!(commenter: &quot;Joe&quot;, body: &quot;what&quot;, article_id: article.reload.id)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="36">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      delete :destroy, {article_id: article.reload.id, id: comment.reload.id }</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="37">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(response).to have_http_status(302)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="38">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="39">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="40">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    it &quot;deletes the comment on the article if user is authenticated&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="41">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      http_login</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="42">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      article = Article.create!(title: &quot;my article&quot;)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="43">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      comment = Comment.create!(commenter: &quot;Joe&quot;, body: &quot;what&quot;, article_id: article.reload.id)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="44">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect {</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="45">
+          <span class="hits">1</span>
+          
+          <code class="ruby">        delete :destroy, {article_id: article.reload.id, id: comment.reload.id }</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="46">
+          <span class="hits">2</span>
+          
+          <code class="ruby">      }.to change {article.reload.comments.count }.by -1</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="47">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="48">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="49">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+    </ol>
+  </pre>
+</div>
+      
         <div class="source_table" id="c7b2464e8c9d47162eab1990605d8ff6c7b96de9">
   <div class="header">
     <h3>spec/models/article_spec.rb</h3>
@@ -2834,20 +3316,20 @@
           <code class="ruby">  def http_login</code>
         </li>
       
-        <li class="covered" data-hits="12" data-linenumber="3">
-          <span class="hits">12</span>
+        <li class="covered" data-hits="14" data-linenumber="3">
+          <span class="hits">14</span>
           
           <code class="ruby">    user = &#39;dhh&#39;</code>
         </li>
       
-        <li class="covered" data-hits="12" data-linenumber="4">
-          <span class="hits">12</span>
+        <li class="covered" data-hits="14" data-linenumber="4">
+          <span class="hits">14</span>
           
           <code class="ruby">    pw = &#39;secret&#39;</code>
         </li>
       
-        <li class="covered" data-hits="12" data-linenumber="5">
-          <span class="hits">12</span>
+        <li class="covered" data-hits="14" data-linenumber="5">
+          <span class="hits">14</span>
           
           <code class="ruby">    request.env[&#39;HTTP_AUTHORIZATION&#39;] = ActionController::HttpAuthentication::Basic.encode_credentials(user,pw)</code>
         </li>
